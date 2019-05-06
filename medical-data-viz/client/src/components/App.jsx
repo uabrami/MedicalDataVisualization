@@ -17,15 +17,14 @@ class App extends React.Component {
     this.handleButtonClick = this.handleButtonClick.bind(this);
   }
 
-  componentDidMount() {
-    // ------------------------------------------------------------------
-    // TODO: Write a get request to the /api/heartFailures endpoint here!
-    // ------------------------------------------------------------------
-    
-    // ------------------------------------------------------------------
-    // TODO: Feed the data you receive back into your data visualization.
-    // ------------------------------------------------------------------
-    
+  componentDidMount(){
+    axios.get('/api/heartFailures')
+    .then((results) => {
+      this.setState({
+        data: results.data,
+      });
+      console.log('got data from api')
+    });
   }
 
 
