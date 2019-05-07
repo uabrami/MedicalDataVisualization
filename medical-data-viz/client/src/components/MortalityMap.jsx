@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import Datamap from 'datamaps';
 import mapConfig from '../map.config.js';
 

@@ -10,7 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: this.props.dummyData,
+      data: "",
       renderMap: false
     }
 
@@ -23,11 +23,19 @@ class App extends React.Component {
       this.setState({
         data: results.data,
       });
-      console.log('got data from api')
+      // console.log('got data from api', this.state.data)
     });
   }
 
+  sortData(){
+    const data = this.state.data;
+    data.map(function(x){
+      {
 
+      }
+    })
+
+  }
   handleButtonClick() {
     this.setState({
       renderMap: true
